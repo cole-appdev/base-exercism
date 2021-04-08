@@ -9,6 +9,10 @@ To get started with TDD, see the `README.md` file in your
 class Acronym
   def self.abbreviate(word)
     word.upcase
-    word.scan(/\b\w/).join
+    # Option 1
+    #word.scan(/\b\w/).join
+    
+    #Option 2
+    word.split(/\s+|,|-/).map {|x| x[0]}.join
   end
 end
