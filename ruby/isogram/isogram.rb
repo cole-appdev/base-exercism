@@ -11,7 +11,7 @@ class Isogram
 
     def self.isogram?(input)
 
-        phrase = input.upcase.gsub(/\s+/, "") # remove all spaces and set to upper case
+        phrase = input.upcase.gsub(/\s+|\W+/, "") # remove all spaces and set to upper case
 
         #First approach
         isogram = true
@@ -25,7 +25,7 @@ class Isogram
 
         return isogram
 
-        
+
         # Second approach (with some research)
         # input.chars.count { |char| input.count(char) > 1 }
     
