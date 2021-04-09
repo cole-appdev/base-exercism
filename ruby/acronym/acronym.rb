@@ -9,14 +9,15 @@ To get started with TDD, see the `README.md` file in your
 class Acronym
   def self.abbreviate(word)
     choice = rand(0..1)
-    word.upcase
-    
+
+    # Letting the method used to build the acronym be randomly selected
     if choice
         # Option 1
-        word.scan(/\b\w/).join
+        word.scan(/\b\w/).join.upcase
     else    
         #Option 2
-        word.split(/\s+|,|-/).map {|x| x[0]}.join
+        word.split(/\s+|,|-/).map {|x| x[0]}.join.upcase
     end
-  end
+  
+    end
 end
