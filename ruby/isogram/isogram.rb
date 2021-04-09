@@ -6,3 +6,14 @@ To get started with TDD, see the `README.md` file in your
 `ruby/isogram` directory.
 =end
 
+
+class Isogram
+
+    def self.isogram?(input)
+
+        #First approach
+        
+
+    end
+
+end
