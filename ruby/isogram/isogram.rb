@@ -11,9 +11,24 @@ class Isogram
 
     def self.isogram?(input)
 
-        #First approach
-        
+        phrase = input.upcase.gsub(/\s+/, "") # remove all spaces and set to upper case
 
+        #First approach
+        isogram = true
+        letters = phrase.split("")
+        letters.each do |x|
+            if phrase.count(x) > 1
+                isogram = false
+            end
+            #puts "x=#{x} and occurs #{phrase.count(x)} times"
+        end
+
+        return isogram
+
+        
+        # Second approach (with some research)
+        # input.chars.count { |char| input.count(char) > 1 }
+    
     end
 
 end

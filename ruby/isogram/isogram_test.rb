@@ -10,13 +10,13 @@ class IsogramTest < Minitest::Test
   end
 
   def test_isogram_with_only_lower_case_characters
-    skip
+    # skip
     input = "isogram"
     assert Isogram.isogram?(input), "Expected true, '#{input}' is an isogram"
   end
 
   def test_word_with_one_duplicated_character
-    skip
+    # skip
     input = "eleven"
     refute Isogram.isogram?(input), "Expected false, '#{input}' is not an isogram"
   end
