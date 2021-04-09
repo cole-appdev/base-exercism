@@ -8,11 +8,15 @@ To get started with TDD, see the `README.md` file in your
 
 class Acronym
   def self.abbreviate(word)
+    choice = rand(0..1)
     word.upcase
-    # Option 1
-    #word.scan(/\b\w/).join
     
-    #Option 2
-    word.split(/\s+|,|-/).map {|x| x[0]}.join
+    if choice
+        # Option 1
+        word.scan(/\b\w/).join
+    else    
+        #Option 2
+        word.split(/\s+|,|-/).map {|x| x[0]}.join
+    end
   end
 end
