@@ -6,3 +6,16 @@ To get started with TDD, see the `README.md` file in your
 `ruby/matrix` directory.
 =end
 
+class Matrix
+  attr_reader :rows, :columns
+
+  def self.initialize(input)
+    @matrix = input
+    @rows = []
+    @columns = []
+    # split string on new lines
+    # split on commas and then strip
+    # rebuild so rows and columns are defined
+
+  end
+end
