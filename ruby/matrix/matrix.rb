@@ -17,10 +17,8 @@ class Matrix
 
     split_input = input.split("\n")
     split_input.each_index do |x|
-        @rows.append(split_input[x].split(/\s/).map(&:to_i).reject!(&:empty?))
+        @rows.append(split_input[x].strip.split(/\s/).map(&:to_i))
     end
-
-    #puts "#{@rows[0]} and #{@rows[1][0]} and #{@rows[0].size-1}\n"
 
     for i in 0...@rows[0].size do
         temp = []
@@ -29,5 +27,6 @@ class Matrix
         end
         @columns.append(temp)
     end
-  end
+  
+    end
 end
