@@ -18,5 +18,8 @@ class Matrix
     split_input.each_index do |x|
         @rows.append(split_input[x].split(/\s/).map(&:to_i))
     end
+
+    puts @rows[0][1]
+
   end
 end
