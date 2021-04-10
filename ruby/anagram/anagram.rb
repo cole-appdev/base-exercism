@@ -12,12 +12,18 @@ class Anagram
         @toDetect = input
     end
 
-    def match(*args)
-        match_set = args
-        match_set.each do |entry|
-            puts "This entrey is #{entry}."
+    def match(array)
+        @match = []
+        
+        array.each do |entry|
+           #puts "\nThis entry is #{entry}."
+            test = @toDetect.split("").map{|char| entry.include?(char)}
+           if test.all?
+                @match.append(entry)
+           end
         end
-
+        
+        return @match
     end
 
 end
