@@ -16,12 +16,19 @@ class Anagram
         @match = []
         
         array.each do |entry|
-            if entry.length < @toDectect.length 
-
+            
+            if entry.length != @toDetect.length 
+            
+            elsif entry.upcase == @toDetect.upcase
+            
             else
-            test = @toDetect.split("").map{|char| entry.include?(char)}
-            if test.all?
-                @match.append(entry)
+                #puts "#{@toDetect.upcase.split("").map{|char| entry.upcase.count(char)}} \n"
+                
+                test = @toDetect.upcase.split("").map{|char| entry.upcase.include?(char)}
+                if test.all?
+                    @match.append(entry)
+                end
+
             end
         end
         
