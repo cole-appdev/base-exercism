@@ -14,11 +14,9 @@ class Matrix
     @rows = []
     @columns = []
 
-    puts input.split("\n")
-
-    # split string on new lines
-    # split on commas and then strip
-    # rebuild so rows and columns are defined
-
+    split_input = input.split("\n")
+    split_input.each_index do |x|
+        @rows.append(split_input[x].split(/\s/).map(&:to_i))
+    end
   end
 end
