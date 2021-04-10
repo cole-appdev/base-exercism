@@ -16,11 +16,13 @@ class Anagram
         @match = []
         
         array.each do |entry|
-           #puts "\nThis entry is #{entry}."
+            if entry.length < @toDectect.length 
+
+            else
             test = @toDetect.split("").map{|char| entry.include?(char)}
-           if test.all?
+            if test.all?
                 @match.append(entry)
-           end
+            end
         end
         
         return @match
