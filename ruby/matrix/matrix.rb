@@ -9,10 +9,13 @@ To get started with TDD, see the `README.md` file in your
 class Matrix
   attr_reader :rows, :columns
 
-  def self.initialize(input)
-    @matrix = input
+  def initialize(input)
+    @matrix = []
     @rows = []
     @columns = []
+
+    puts input.split("\n")
+
     # split string on new lines
     # split on commas and then strip
     # rebuild so rows and columns are defined
