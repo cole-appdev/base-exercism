@@ -13,8 +13,11 @@ class Anagram
     end
 
     def match(*args)
+        match_set = args
+        match_set.each do |entry|
+            puts "This entrey is #{entry}."
+        end
 
-        
     end
 
 end
