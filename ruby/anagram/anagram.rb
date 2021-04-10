@@ -17,18 +17,14 @@ class Anagram
         
         array.each do |entry|
             
-            if entry.length != @toDetect.length 
+            if entry.length != @toDetect.length
             
             elsif entry.upcase == @toDetect.upcase
             
-            else
-                #puts "#{@toDetect.upcase.split("").map{|char| entry.upcase.count(char)}} \n"
-                
-                test = @toDetect.upcase.split("").map{|char| entry.upcase.include?(char)}
-                if test.all?
-                    @match.append(entry)
-                end
-
+            else        
+                if entry.upcase.chars.sort == @toDetect.upcase.chars.sort
+                    @match.append(entry) 
+                end 
             end
         end
         
