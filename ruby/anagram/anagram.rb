@@ -6,3 +6,15 @@ To get started with TDD, see the `README.md` file in your
 `ruby/anagram` directory.
 =end
 
+class Anagram
+
+    def initialize(input)
+        @toDetect = input
+    end
+
+    def match(*args)
+
+        
+    end
+
+end
